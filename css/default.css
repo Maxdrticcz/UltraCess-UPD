@@ -393,7 +393,7 @@ tr:last-child > th {
 	border-radius: 20px;
 	color: #ccc;
 	box-shadow: 0 0 10px #000;
-	background-color: rgb(122, 122, 122);
+	background-color: rgb(44, 44, 44);
 }
 
 #info > p {
@@ -659,6 +659,20 @@ tr:last-child > th {
 #info, #border, #board, #whiteCemetery, #blackCemetery, #promotion, .menu h2 {
 	user-select: none;
 	cursor: default;
+}
+
+#whiteCemetery, #blackCemetery {
+	background-color: rgb(44, 44, 44);
+}
+
+#whiteCemetery {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+#blackCemetery {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 /* Animations */
