@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
+	<link rel="canonical" href="http://plainchess.timwoelfle.de" />
+	<title>PlainChess</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+<body>
+	<div id="header">
+		<a href="https://GitHub.com/Maxdrticcz">GitHub</a> · <a href="http://youtube.cz">Youtube</a> 
+	</div>
+	
+	<div id="main">
+		<h1>
+			<a href="index.html"><span class="light">Ultra</span>Chess</a>
+		</h1>
+		
+		<div id="flip">
+			<div id="faq">
+				<div id="wideBorder"></div>
+
+				<div id="content">
+					<h2>What is PlainChess?</h2>
+					<p>PlainChess aims to be a simple yet full–featured and beautiful alternative to the cluttered chess portals currently existing.</p>
+					<p>Its primary goal is to allow two persons to play a round of chess, no matter whether they happen to be at the same location or on a different continent. It's designed to be platform independent and to run on every computer or smart phone equipped with a modern web browser and thus enabling people everywhere around the globe to play chess, at home and on the go, online and offline.</p>
+					<p>It was originally published in January 2011 and as of March 2013 its <a href="https://GitHub.com/TimWoelfle/PlainChess">code</a> is open source and licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPL Version 3 license</a>.</p>
+
+					<!--<h2>What is the 'awareness mode'?</h2>
+					<p>When playing, you can se a little light bulb (<span style="opacity:0.3">💡</span>) on the bottom left, allowing you to switch on 'awareness mode'. This special mode colorizes the fields depending on which player has more pieces that can access it: Green means that white has more control over a field and red means black. Blue means both players have an equal number of pieces that can possibly strike on it. The richer and darker the color, the more pieces have access.</p>
+					<p>The color code is <em>not</em> a recommendation which fields to move on, it's <em>not</em> artifical intelligence or anything of the like. You still have to use your brains, the color code just helps you not to overlook anything.</p>-->
+
+					<h2>Why yet another chess implementation, what makes PlainChess different?</h2>
+
+					<p>Its minimalistic approach sets it apart from most of the other chess implementations on the internet. They usually use browser plugins like Adobe Flash or even client software to realize the game itself and offer a variety of features around it: news, riddles, communities and dozens of little gadgets.</p>
+					<p>Due to this complexity they often take a lot of clicks to get a game started, they tend to react slowly and are often cluttered with ads. Some even require registration fees in order to be able to play a game. PlainChess is free, fast and built on modern web technologies but on the other hand also passes on features beyond basic gameplay.</p>
+
+					<h2>I want a list, what features do you offer?</h2>
+					<ul>
+						<li>Online and offline games with an appointed partner</li>
+						<li>Nearly full implementation of all official chess rules</li>
+						<li>Autosaving the game for interrupted sessions</li>
+						<li>Minimalistic and clean interface</li>
+						<li>Platform independent due to the use of modern web technologies</li>
+						<li>Free and ad–free</li>
+					</ul>
+
+					<h2>Which chess rules exactly are implemented, which aren't?</h2>
+					<p>Nearly all of them: PlainChess recognizes valid moves as well as <a href="http://en.wikipedia.org/wiki/Check_(chess)">check</a>, <a href="http://en.wikipedia.org/wiki/Checkmate">mate</a> and <a href="http://en.wikipedia.org/wiki/Stalemate">stalemate</a> situations. It also supports the three specials moves of kings and pawns: <a href="http://en.wikipedia.org/wiki/Castling">castling</a>, <a href="http://en.wikipedia.org/wiki/Promotion_(chess)">pawn promotions</a> and <a href="http://en.wikipedia.org/wiki/En_passant">en passant capturing</a>. The only rules currently not supported are the draw rules except for stalemate: <a href="http://en.wikipedia.org/wiki/Threefold_repetition">threefold repetition</a>, <a href="http://en.wikipedia.org/wiki/Fifty-move_rule">the fifty–move rule</a>, impossibility of checkmate and <a href="http://en.wikipedia.org/wiki/Draw_by_agreement">mutual agreement</a>.</p>
+					
+					<h2>I like PlainChess. How can I support you?</h2>
+					<p>Spread the word, tell your friends and enemies about PlainChess; twitter, blog or write letters about it. Share it on your social networks. Send me an e-mail. Have a look at <a href="https://GitHub.com/TimWoelfle/PlainChess">the code</a> and add new features.</p>
+					
+					<h2>What features could be implemented next?</h2>
+					<h3>General</h3>
+					<ul>
+						<li>Support of time control and chess clocks</li>
+						<li>Support of <a href="http://en.wikipedia.org/wiki/FEN">FEN codes</a> and saved games</li>
+						<li>Support of at least some of the draw rules</li>
+						<li>Optimized layout for smart phones</li>
+					</ul>
+
+					<h3>Online mode</h3>
+					<ul>
+						<li>Synchronized game time for time control and chess clocks</li>
+						<li>Server side turn saving for rejoins and spectator mode</li>
+						<li>Player pings for recognition of disconnection</li>
+					</ul>
+
+					<h2>You keep mentioning modern web technologies: What exactly are you talking about?</h2>
+					<p>PlainChess is the first chess implementation built completely with HTML5 technologies (at least as far as I know).</p>
+					<p>The game engine is written in JavaScript and relies on the frameworks <a href="http://jquery.com/">jQuery</a> and <a href="http://jqueryui.com/">jQuery UI</a>, which means that offline games can be played without internet connectivity (this would be interesting for a smart phone optimized version with <a href="http://www.w3.org/TR/html5/offline.html">HTML5 manifest</a>).</p>
+					<p>The design uses CSS3 en masse: rounded borders, shadows, opacity, sprite images and transitions &amp; transforms.</p>
+
+					<h2>Who are you and why did you make this?</h2>
+					<p>I'm Tim Wölfle from Germany and wanted to try out the new possibilities HTML5 technologies offer. At the same time I wanted to play a quick round of chess with a friend on the internet, but didn't find anything that would allow me to start right away and without registration.</p>
+				</div>
+			</div>
+
+			<div id="chess">
+				<div id="info">
+					<p id="lastMove"></p>
+					<p id="gameTime"></p>
+					<p id="currentTurn"><span></span><!--<a id="toggleAwareness" title="Toggle 'awareness mode', highlighting how many pieces can access each field (see FAQ).">💡</a>--></p>
+				</div>
+
+				<div id="border">
+					<table>
+						<tr><th></th><td colspan="8" rowspan="8"></td></tr>
+						<tr><th></th></tr>
+						<tr><th></th></tr>
+						<tr><th></th></tr>
+						<tr><th></th></tr>
+						<tr><th></th></tr>
+						<tr><th></th></tr>
+						<tr><th></th></tr>
+						<tr><td></td><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+					</table>
+				</div>
+
+				<table id="board">
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				</table>
+
+				<ul id="whiteCemetery"></ul>
+				<ul id="blackCemetery"></ul>
+				<div class="promotion"><div></div><ul></ul></div>
+
+				<div class="menu" id="start">
+					<div class="thin stripe tone40"></div>
+					<div id="hostGame" class="stripe tone55">
+						<h2><span>♙</span>Play white online</h2>
+						<input type="text" placeholder="Host game named…" id="hostGameName" />
+						<input type="button" value="Go" />
+					</div>
+					<div id="joinGame" class="stripe tone70">
+						<h2><span>♟</span>Play black online</h2>
+						<input type="text" placeholder="Join game named…" id="joinGameName" />
+						<input type="button" value="Go" />
+					</div>
+					<div id="playOffline" class="stripe tone85">
+						<h2><a href="#"><span>♙♟</span>Play offline</a></h2>
+					</div>
+					<div class="thin stripe tone100"></div>
+				</div>
+
+				<div class="menu" id="pause">
+					<div class="thin stripe tone40"></div>
+					<div id="toggleAutoSave" class="stripe tone55">
+						<h2><a href="#" style="letter-spacing: -0.075em"><span>✍</span>Autosave <span>on</span></a></h2>
+					</div>
+					<div id="playOn" class="stripe tone70">
+						<h2><a href="#"><span>✲</span>Play on</a></h2>
+					</div>
+					<div id="quitGame" class="stripe tone85">
+						<h2><a href="#"><span>✗</span>Quit game</a></h2>
+					</div>
+					<div class="thin stripe tone100"></div>
+				</div>
+
+				<div class="menu" id="end">
+					<div class="thin stripe tone70"></div>
+					<div id="playOn" class="stripe tone85">
+						<h2 style="top: 60px"><a href="#">Back to board</a></h2>
+					</div>
+					<div class="stripe tone100" style="z-index: 1; overflow: visible">
+						<h2><span></span><span></span></h2>
+					</div>
+					<div id="quitGame" class="stripe tone85">
+						<h2><a href="#">Start new game</a></h2>
+					</div>
+					<div class="thin stripe tone70"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/game.min.js"></script>
+</body>
+</html>

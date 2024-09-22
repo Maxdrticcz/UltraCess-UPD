@@ -1,0 +1,672 @@
+/* Layout */
+
+body {
+	font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+	background-color: black;
+}
+
+/* Header */
+
+#header {
+	line-height: 20px;
+	width: 100%;
+	padding: 5px 30px;
+	background-color: black;
+	color: #ccc;
+	box-sizing: border-box;
+	margin-top: 20px;
+}
+
+#header a {
+	color: inherit;
+	text-decoration: none;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 15px;
+	padding: 8px;
+}
+
+#header a:hover, #header a.active {
+	color: #999;
+	text-decoration: underline;
+}
+
+/* Headline */
+
+h1 {
+	width: 100%;
+	position: absolute;
+	top: -58px;
+	color: #342217;
+	font-size: 36pt;
+	font-weight: bold;
+	text-align: right;
+	text-shadow: 0 0 10px RGBa(0,0,0,0.5);
+}
+
+h1 a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.light {
+	color: white; /* 793e12 / 905622 */
+	font-weight: lighter;
+}
+
+#main a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Container & Flipping */
+
+#main {
+	position: relative;
+	width: 540px;
+	height: 540px;
+	margin: 0 auto 0 auto;
+	top: 86px;
+	
+	perspective: 900px;
+}
+
+#flip {
+	width: inherit;
+	height: inherit;
+	transform-style: preserve-3d;
+	transition: transform 1.5s;
+}
+
+.flipped {
+	transform: rotateX(180deg);
+}
+
+#faq {
+	transform: rotateX(180deg);
+}
+
+#chess {
+	transform: rotateX(0deg);
+}
+
+#faq, #chess {
+	backface-visibility: hidden;
+	transition: opacity 1.5s;
+}
+
+#faq, #flip.flipped #chess {
+	opacity: 0;
+	z-index: 0;
+}
+
+#flip.flipped #faq, #chess {
+	opacity: 1;
+	z-index: 1;
+}
+
+/* FAQ */
+
+#wideBorder {
+	position: absolute;
+	left: -120px;
+	height: 540px;
+	width: 780px;
+	border: 30px solid #342217;
+	background: url("../img/bgTile.png") bottom left repeat;
+	
+	border-radius: 20px;
+	box-shadow: 0 0 10px #000;
+	box-sizing: border-box;
+}
+
+#content {
+	background-color: RGBa(161, 142, 128, 0.93);
+	top: 30px;
+	left: -90px;
+	padding: 30px;
+	height: 480px;
+	width: 720px;
+	position: absolute;
+	
+	border-radius: 5px;
+	box-sizing: border-box;
+	
+	overflow: scroll;
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+#faq h2:first-child {
+	margin: 0px 0 10px 0;
+	font-size: 16pt;
+}
+
+#faq h2 {
+	margin: 30px 0 10px 0;
+	font-size: 16pt;
+}
+
+#faq h3 {
+	margin: 10px 0 10px 0;
+}
+
+#faq p, #faq ul {
+	line-height: 120%;
+	margin-bottom: 10px;
+}
+
+#faq ul {
+	list-style: inside disc;
+}
+
+#faq a {
+	color: #342217;
+	text-decoration: underline;
+}
+
+/* Chess */
+
+#faq, #chess {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+#border {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background-color: rgb(16, 16, 16);
+	
+	border-radius: 20px;
+}
+
+#border table {
+	display: none;
+}
+
+th {
+	font-weight: normal;
+	color: #999;
+}
+
+tr > th:first-child {
+	height: 60px;
+	padding-right: 9px;
+	vertical-align: middle;
+}
+
+tr:last-child > th {
+	width: 60px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+
+/* Chess board */
+
+#board, #border table {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+#board {	
+	border-radius: 10px;
+	box-shadow: inset 0 0 5px #000;
+}
+
+#board td {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border-radius: 5px;
+	transition: background-color 1s;
+}
+
+#chess:not(.awareness) #board tr:nth-child(odd) > td:nth-child(odd), #chess:not(.awareness) #board tr:nth-child(even) > td:nth-child(even) {
+	background-color: #414141; /* #986534 */
+}
+
+#chess.awareness #board td { background-color: #ccc; }
+/* owned by white */
+#chess.awareness #board td.property1 { background-color: #99bb99; }
+#chess.awareness #board td.property2 { background-color: #77dd77; }
+#chess.awareness #board td.property3 { background-color: #63d863; } /* #55ff55 */
+#chess.awareness #board td.property4 { background-color: #4ed34e; }
+#chess.awareness #board td.property5 { background-color: #3ace3a; }
+#chess.awareness #board td.property6 { background-color: #30bf30; }
+#chess.awareness #board td.property7 { background-color: #2aab2a; }
+#chess.awareness #board td.property8 { background-color: #259625; }
+#chess.awareness #board td.property9 { background-color: #208220; }
+#chess.awareness #board td.property10 { background-color: #1b6d1b; }
+/* neutral */
+#chess.awareness #board td.neutral1 { background-color: #9999bb; }
+#chess.awareness #board td.neutral2 { background-color: #7777dd; }
+#chess.awareness #board td.neutral3 { background-color: #6363d8; } /* #5555ff */
+#chess.awareness #board td.neutral4 { background-color: #4e4ed3; }
+#chess.awareness #board td.neutral5 { background-color: #3a3ace; }
+#chess.awareness #board td.neutral6 { background-color: #3030bf; }
+#chess.awareness #board td.neutral7 { background-color: #2a2aab; }
+#chess.awareness #board td.neutral8 { background-color: #252596; }
+#chess.awareness #board td.neutral9 { background-color: #202082; }
+#chess.awareness #board td.neutral10 { background-color: #161659; }
+/* owned by black */
+#chess.awareness #board td.property-1 { background-color: #bb9999; }
+#chess.awareness #board td.property-2 { background-color: #dd7777; }
+#chess.awareness #board td.property-3 { background-color: #d86363; } /* #ff5555 */
+#chess.awareness #board td.property-4 { background-color: #d34e4e; }
+#chess.awareness #board td.property-5 { background-color: #ce3a3a; }
+#chess.awareness #board td.property-6 { background-color: #bf3030; }
+#chess.awareness #board td.property-7 { background-color: #ab2a2a; }
+#chess.awareness #board td.property-8 { background-color: #962525; }
+#chess.awareness #board td.property-9 { background-color: #822020; }
+#chess.awareness #board td.property-10 { background-color: #6d1b1b; }
+
+#board tr:first-child > td:first-child {
+	border-top-left-radius: 10px;
+}
+
+#board tr:first-child > td:last-child {
+	border-top-right-radius: 10px;
+}
+
+#board tr:last-child > td:first-child {
+	border-bottom-left-radius: 10px;
+}
+
+#board tr:last-child > td:last-child {
+	border-bottom-right-radius: 10px;
+}
+
+.acceptable:empty {
+	background-image: url("../img/acceptable.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.acceptable > .piece {
+	opacity: 0.5;
+}
+
+.piece {
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	font: 40pt "MS Gothic", "Arial Unicode", "Apple Symbols";
+	color: transparent;
+	background: url("../img/sprites.png") no-repeat;
+	background-size: 360px auto;
+}
+
+.white.pawn {
+	background-position: 0 0;
+}
+
+.white.knight {
+	background-position: 20% 0;
+}
+
+.white.bishop {
+	background-position: 40% 0;
+}
+
+.white.rook {
+	background-position: 60% 0;
+}
+
+.white.queen {
+	background-position: 80% 0;
+}
+
+.white.king {
+	background-position: 100% 0;
+}
+
+.black.pawn {
+	background-position: 0 28.57%;
+}
+
+.black.knight {
+	background-position: 20% 28.57%;
+}
+
+.black.bishop {
+	background-position: 40% 28.57%;
+}
+
+.black.rook {
+	background-position: 60% 28.57%;
+}
+
+.black.queen {
+	background-position: 80% 28.57%;
+}
+
+.black.king {
+	background-position: 100% 28.57%;
+}
+
+#whiteCemetery {
+	position: absolute;
+	top: 30px;
+	left: -130px;
+	width: 120px;
+	height: 480px;
+	padding-right: 10px;
+}
+
+#blackCemetery {
+	position: absolute;
+	top: 30px;
+	left: 540px;
+	width: 120px;
+	height: 480px;
+	padding-left: 10px;
+}
+
+#whiteCemtery > li, #blackCemtery > li {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#whiteCemetery > li {
+	float: right;
+}
+
+#blackCemetery > li {
+	float: left;
+}
+
+/* Info drawer */
+
+#info {
+	position: absolute;
+	width: 540px;
+	height: 540px;
+	border-radius: 20px;
+	color: #ccc;
+	box-shadow: 0 0 10px #000;
+	background-color: rgb(122, 122, 122);
+}
+
+#info > p {
+	width: 480px;
+	position: absolute;
+	bottom: 9px;
+	left: 30px;
+	right: 30px;
+}
+
+#currentTurn {
+	float: left;
+	text-align: left;
+}
+
+#gameTime {
+	text-align: center;
+}
+
+#lastMove {
+	float: right;
+	text-align: right;
+}
+
+#toggleAwareness {
+	cursor: pointer;
+}
+
+#chess:not(.awareness) #toggleAwareness {
+	opacity: 0.3;
+}
+
+/* Pawn promotion menu */
+
+.promotion {
+	display: none;
+	background-color: RGBa(52,34,23,0.9);
+	width: 240px;
+	height: 60px;
+	position: absolute;
+	left: 140px;
+	border-radius: 20px;
+	padding: 10px;
+	box-shadow: 0 0 10px #000;
+}
+
+#top.promotion {
+	top: 105px;
+}
+
+#bottom.promotion {
+	top: 355px;
+}
+
+.promotion > div {
+	border-color: transparent;
+	border-style: solid;
+	border-width: 20px;
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	left: 110px;
+}
+
+#top.promotion > div {
+	border-bottom-color: RGBa(52,34,23,0.9);
+	top: -41px;
+}
+
+#bottom.promotion > div {
+	border-top-color: RGBa(52,34,23,0.9);
+	top: 80px;
+}
+
+.promotion > ul {
+	background-color: #5a4232;
+	width: 240px;
+	height: 60px;
+	border-radius: 15px;
+}
+
+.promotion > ul > li > div {
+	transition: opacity 0.3s;
+}
+
+.promotion > ul:hover div {
+	opacity: 0.3;
+}
+
+.promotion > ul > li {
+	float: left;
+}
+
+.promotion > ul > li:first-child > div {
+	transform: scaleX(-1);
+}
+
+.promotion > ul > li:hover > div {
+	opacity: 1;
+}
+
+/* Menu general */
+
+.menu {
+	display: none;
+	height: 480px;
+	width: 480px;
+	overflow: hidden;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.stripe {
+	width: 100%;
+	height: 25%;
+	position: relative;
+	overflow: hidden;
+}
+
+.menu > .stripe:first-child {
+	border-radius: 10px 10px 0 0;
+}
+
+.menu > .stripe:last-child {
+	border-radius: 0 0 10px 10px;
+}
+
+.thin {
+	height: 12.5%;
+}
+
+.tone30 {
+	background-color: RGBa(161, 142, 128, 0.93);
+}
+
+.tone40 {
+	background-color: RGBa(155, 130, 111, 0.94); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.40) */
+}
+
+.tone55 {
+	background-color: RGBa(146, 112, 87, 0.96); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.55) */
+}
+
+.tone70 {
+	background-color: RGBa(137, 95, 63, 0.97); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.70) */
+}
+
+.tone85 {
+	background-color: RGBa(129, 78, 40, 0.99); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.85) */
+}
+
+.tone100 {
+	background-color: RGBa(121, 62, 18, 1); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,1) */
+}
+
+.stripe > h2 {
+	font-size: 28pt;
+	font-weight: normal;
+	color: #342217;
+	position: absolute;
+	left: 147px;
+	top: 27px;
+}
+
+.stripe > h2 span:first-child {
+	font: 128.1px 'MS Gothic', 'Arial Unicode', 'Apple Symbols'; /* HACK font-size is odd for correct placing in firefox */
+	position: absolute;
+	left: -125px;
+	top: -25px;
+	width: 120px;
+	height: 120px;
+	color: transparent;
+	background: url("../img/sprites.png") no-repeat;
+}
+
+.menu input {
+	border: 0; 
+	background-color: #5a4232;
+	padding: 4px;
+	border-radius: 5px;
+	font-size: 14pt;
+	color: #999;
+}
+
+.menu input[type="text"] {
+	width: 205px;
+	position: absolute;
+	left: 147px;
+	top: 70px;
+	height: 21px;
+}
+
+.menu input[type="text"]::placeholder {
+	color: #999;
+	opacity: 1;
+}
+
+.menu input[type="text"]:not(.error):focus::placeholder {
+	opacity: 0;
+}
+
+.menu input[type="button"] {
+	width: 40px;
+	position: absolute;
+	left: 366px;
+	top: 70px;
+	height: 29px;
+}
+
+.menu .error {
+	background-color: rgb(153,30,30);
+}
+
+.inactive {
+	opacity: 0.3;
+}
+
+/* Specific menu items */
+
+#pause h2, #end > .tone100 > h2 {
+	font-size: 42pt;
+}
+
+#start > .tone55 > h2 span {
+	background-position: 0 57.14%;
+}
+
+#start > .tone70 > h2 span {
+	background-position: 20% 57.14%;
+}
+
+#start > .tone85 > h2 span {
+	background-position: 40% 57.14%;
+}
+
+#pause > .tone55 > h2 span {
+	background-position: 60% 57.14%;
+}
+
+#pause > .tone70 > h2 span {
+	background-position: 80% 57.14%;
+}
+
+#pause > .tone85 > h2 span {
+	background-position: 100% 57.14%;
+}
+
+#end > .tone100 > h2 span:first-child {
+	background-position: 0px 100%;
+	width: 180px;
+	height: 180px;
+	left: -175px;
+	top: -57px
+}
+
+#end  > .stripe > h2 {
+	left:  165px;
+}
+
+/* Selection behaviour */
+
+#info, #border, #board, #whiteCemetery, #blackCemetery, #promotion, .menu h2 {
+	user-select: none;
+	cursor: default;
+}
+
+/* Animations */
+
+.horizontal {
+	transform: scaleX(0);
+}
+
+.vertical {
+	transform: scaleY(0);
+}
