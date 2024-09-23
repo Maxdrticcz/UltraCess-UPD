@@ -10,12 +10,25 @@ body {
 #header {
 	line-height: 20px;
 	width: 100%;
-	padding: 5px 30px;
+	padding: 20px;
 	background-color: black;
 	color: #ccc;
 	box-sizing: border-box;
-	margin-top: 20px;
 }
+
+.Button {
+	color: inherit;
+	text-decoration: none;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 15px;
+	padding: 8px;
+	background-color: black;
+	height: 40px;
+	font-weight: 20px;
+	}
+	
 
 #header a {
 	color: inherit;
@@ -27,7 +40,7 @@ body {
 	padding: 8px;
 }
 
-#header a:hover, #header a.active {
+#header a:hover, #header a.active, .Button:hover {
 	color: #999;
 	text-decoration: underline;
 }
