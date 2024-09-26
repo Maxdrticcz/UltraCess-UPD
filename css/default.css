@@ -10,11 +10,26 @@ body {
 #header {
 	line-height: 20px;
 	width: 100%;
-	padding: 5px 30px;
+	padding: 20px;
 	background-color: black;
 	color: #ccc;
 	box-sizing: border-box;
-	margin-top: 20px;
+}
+
+.Verze {
+	line-height: 20px;
+	width: 10%;
+	padding: 20px;
+	background-color: black;
+	color: #ccc;
+	box-sizing: border-box;
+	color: inherit;
+	text-decoration: none;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 15px;
+	padding: 8px;
 }
 
 #header a {
@@ -113,7 +128,7 @@ h1 a {
 	left: -120px;
 	height: 540px;
 	width: 780px;
-	border: 30px solid #000000;
+	border: 30px solid #342217;
 	background: url("../img/bgTile.png") bottom left repeat;
 	
 	border-radius: 20px;
@@ -162,7 +177,7 @@ h1 a {
 }
 
 #faq a {
-	color: #000000;
+	color: #342217;
 	text-decoration: underline;
 }
 
@@ -259,7 +274,7 @@ tr:last-child > th {
 #chess.awareness #board td.property-1 { background-color: #bb9999; }
 #chess.awareness #board td.property-2 { background-color: #dd7777; }
 #chess.awareness #board td.property-3 { background-color: #d86363; } /* #ff5555 */
-#chess.awareness #board td.property-4 { background-color: #ff0000; }
+#chess.awareness #board td.property-4 { background-color: #d34e4e; }
 #chess.awareness #board td.property-5 { background-color: #ce3a3a; }
 #chess.awareness #board td.property-6 { background-color: #bf3030; }
 #chess.awareness #board td.property-7 { background-color: #ab2a2a; }
@@ -527,33 +542,33 @@ tr:last-child > th {
 }
 
 .tone30 {
-	background-color: rgb(0 0 0);
+	background-color: RGBa(161, 142, 128, 0.93);
 }
 
 .tone40 {
-	background-color: rgb(0 0 0); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.40) */
+	background-color: RGBa(155, 130, 111, 0.94); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.40) */
 }
 
 .tone55 {
-	background-color: rgb(0 0 0); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.55) */
+	background-color: RGBa(146, 112, 87, 0.96); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.55) */
 }
 
 .tone70 {
-	background-color: rgb(0 0 0 / 0.1); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.70) */
+	background-color: RGBa(137, 95, 63, 0.97); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.70) */
 }
 
 .tone85 {
-	background-color: rgba(0, 0, 0, 0.6);; /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.85) */
+	background-color: RGBa(129, 78, 40, 0.99); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,0.85) */
 }
 
 .tone100 {
-	background-color: rgba(0, 0, 0, 0.9); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,1) */
+	background-color: RGBa(121, 62, 18, 1); /* RGBa(180,180,180,0.9) & RGBa(121,62,18,1) */
 }
 
 .stripe > h2 {
 	font-size: 28pt;
 	font-weight: normal;
-	color: #ffffff;
+	color: #342217;
 	position: absolute;
 	left: 147px;
 	top: 27px;
@@ -572,7 +587,7 @@ tr:last-child > th {
 
 .menu input {
 	border: 0; 
-	background-color: #000000;
+	background-color: #5a4232;
 	padding: 4px;
 	border-radius: 5px;
 	font-size: 14pt;
@@ -605,7 +620,7 @@ tr:last-child > th {
 }
 
 .menu .error {
-	background-color: rgb(0 0 0);
+	background-color: rgb(153,30,30);
 }
 
 .inactive {
