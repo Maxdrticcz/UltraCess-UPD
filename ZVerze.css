@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+}
+
+p {
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+
+.Flex {
+    display: flex;
+    flex-direction: row;
+    height: 695px;
+}
+
+
+.Flex-Border-L {
+    background-color: rgb(0, 0, 0);
+    flex: 1;
+    height: 100%;
+}
+
+
+.Flex-Border-M {
+    background-color: rgb(0, 0, 0);
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+    .Input-CheckBox {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 37%;
+        border: 3px, solid, black; 
+        cursor: pointer;       
+} 
+    .Input-CheckBox:hover {
+        padding: 8px;       
+}     
+    .Input-Button {
+        position: absolute;
+        background-color: black;
+        color: white;
+        font-family: Arial;
+        font-weight: 25px;
+        padding: 5px;
+        border-width: 2.5px;
+        border-style: solid;
+        border-color: white;
+        border-radius: 7px;
+        right: 170px;
+    }
+    .Input-Button:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .Div-Input-Button {
+        background-color: rgb(40, 40, 40);
+        position: absolute;
+        height: 150px;
+        width: 99%;
+        top: 35%;
+        left: 0%;
+        border-width: 3.5px;
+        border-color: white;
+        border-style: solid;
+        border-radius: 6px;
+    }
+
+
+.Flex-Border-R {
+    background-color: rgb(0, 0, 0);
+    flex: 1;
+    height: 100%;
+}
+
