@@ -37,18 +37,9 @@ p {
         border: 3px, solid, black; 
         cursor: pointer;
         bottom: 17px;
-        right: 220px;
+        right: 285px;
         z-index: 5;      
-} 
-    .Souhlas {
-        position: absolute;
-        bottom: 0px;
-        right: 267px;    
-        margin-top: none;  
-        margin-bottom: none;
-        z-iindex: 5;
-        
-    }    
+}    
     .Input-CheckBox:hover {
         padding: 8px;       
 }     
@@ -63,7 +54,7 @@ p {
         border-style: solid;
         border-color: white;
         border-radius: 7px;
-        right: 110px;
+        right: 170px;
         bottom: 15px;
     }
     .Input-Button:hover {
