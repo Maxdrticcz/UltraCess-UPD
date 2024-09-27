@@ -6,6 +6,7 @@ p {
     font-family: Arial;
     color: white;
     text-align: center;
+    font-weight: 10px;
 }
 
 .Flex {
@@ -28,14 +29,25 @@ p {
     height: 100%;
     position: relative;
 }
+    
     .Input-CheckBox {
         position: absolute;
         width: 25px;
         height: 25px;
-        left: 37%;
         border: 3px, solid, black; 
-        cursor: pointer;       
+        cursor: pointer;
+        bottom: 17px;
+        right: 220px;
+        z-index: 5;      
 } 
+    .Souhlas {
+        position: absolute;
+        bottom: 0px;
+        right: 267px;    
+        margin-top: none;  
+        margin-bottom: none;
+        
+    }    
     .Input-CheckBox:hover {
         padding: 8px;       
 }     
@@ -50,7 +62,8 @@ p {
         border-style: solid;
         border-color: white;
         border-radius: 7px;
-        right: 170px;
+        right: 110px;
+        bottom: 15px;
     }
     .Input-Button:hover {
         cursor: pointer;
@@ -59,7 +72,7 @@ p {
     .Div-Input-Button {
         background-color: rgb(40, 40, 40);
         position: absolute;
-        height: 150px;
+        height: 170px;
         width: 99%;
         top: 35%;
         left: 0%;
