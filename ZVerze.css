@@ -46,6 +46,7 @@ p {
         right: 267px;    
         margin-top: none;  
         margin-bottom: none;
+        z-iindex: 5;
         
     }    
     .Input-CheckBox:hover {
